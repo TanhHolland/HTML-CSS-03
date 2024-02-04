@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    --header-bg :  #10375C;
+}
 html {
     font-size: 62.5%;
 }
@@ -9,31 +12,52 @@ html {
 }
 body {
     font-size: 1.6rem;
-    font-family: "Sora";
+    font-family: "Sora", sans-serif;
 }
 /* Common */
+a {
+    text-decoration: none;
+}
 .container {
     width: 1170px;
     max-width: calc(100% - 48px);
     margin: 0 auto;
 }
-a {
-    text-decoration: none;
+.btn {
+    --height : 60px;
+    display: inline-block;
+    min-width: 205px;
+    height: var(--height);
+    border-radius: 30px;
+    text-align: center;
+    line-height: var(--height);
+    font-size: 1.8rem;
+    font-weight: 400;
+    background: #2E80CE;
+    color: #FFFFFF;
+}
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }
 /* Header */
 .header {
     min-height: 100vh;
-    background: var(--header-bg);
+    background-color: var(--header-bg);
+    padding-top: 30px;
+    padding : 15px 40px;
 }
 .header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+/* Header -- Logo */
 .logo {
     font-size: 1rem;
     position: relative;
-    display: inline-flex; /* khi mình chuyển khối logo ra chỗ khác thì vẫn ok */
+    display: flex;
+    /* 1 rem để font-size cả khối. để dùng em với 1em = 10px */
 }
 .logo__circle::before,
 .logo__circle::after {
@@ -44,42 +68,69 @@ a {
 .logo__circle::before {
     width: 3em;
     height: 3em;
-    background: #2e80ce;
+    background-color: #2E80CE;
 }
 .logo__circle::after {
     position: absolute;
     width: 1.6em;
     height: 1.6em;
-    background-color: #ffffff;
-    top: 1.1em;
     left: 1.1em;
+    top: 1.1em;
+    background-color: #FFFFFF;
 }
 .logo__text {
+    color: #FFFFFF;
     margin-left: 0.6em;
-    line-height: 1.5em;
+    line-height: 1.6em;
 }
 .logo__brand {
     display: block;
-    color: #fff;
     font-size: 1.8em;
     font-weight: 400;
-    text-align: right;
+    text-align: right;  
 }
 .logo__brand--small {
-    font-size: 1.2em;
     font-weight: 300;
+    font-size: 1.2em;
 }
-.navbar {
-    margin-left: 304px;
-    display: flex;
-    align-items: center;
-}
+/* Header -- Navbar */
 .navbar__list {
     display: flex;
 }
-.navbar__item {
-    margin-left: 42px;
-    color: #c9d2da;
+.navbar__link {
+    color: #C9D2DA;
     font-size: 1.6rem;
     font-weight: 300;
+    padding: 4px 21px;
+}
+.navbar__link:hover,
+.header-action__login:hover,
+.navbar__link--active {
+    color: #FFFFFF;
+    text-shadow: 1px 0 0 currentColor;
+}
+.navbar__link--active::before {
+    position: relative;
+    top: -3px;
+    left: -8px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+.header-action__login { 
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #C9D2DA;
+    padding: 4px 0;
+}
+.header-action__signup {
+    --height : 44px;
+    font-size: 1.6rem;
+    min-width: 104px;
+    height: var(--height);
+    line-height: var(--height);
+    margin-left: 28px;
 }
