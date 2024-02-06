@@ -40,17 +40,17 @@ a {
 .section__heading {
     font-size: 5rem;
     font-weight: 600;
-    color: #10375C;
+    color: #10375c;
     letter-spacing: -0.02em;
     text-align: center;
 }
 .section__desc {
     font-size: 1.8rem;
     width: 40%;
-    margin: 18px auto 0 auto;
+    margin-top: 18px;
     font-weight: 300;
-    color: #575F66;
-    text-align: center;
+    color: #575f66;
+    line-height: 1.67;
 }
 /* Header */
 .header {
@@ -210,6 +210,11 @@ a {
 .service {
     padding-top: 170px;
 }
+.service__desc {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 .service__row {
     margin-top: 70px;
     display: flex;
@@ -234,11 +239,11 @@ a {
 }
 .service-item:hover {
     /* position: relative; */
-    box-shadow: 0px 14px 28px 0px #0000000D;
+    box-shadow: 0px 14px 28px 0px #0000000d;
 }
 .service-item:hover .service-item__icon-wrap {
-    background: #2E80CE;
-    color: #FFF;
+    background: #2e80ce;
+    color: #fff;
 }
 .service-item__icon-wrap {
     width: 60px;
@@ -247,7 +252,7 @@ a {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
     flex-shrink: 0; /* hình tròn ko bị méo */
     border-radius: 50%;
-    color: #10375C;
+    color: #10375c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -259,12 +264,61 @@ a {
 .service-item__heading {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #10375C;
+    color: #10375c;
 }
 .service-item__desc {
     font-size: 1.6rem;
     font-weight: 300;
-    color: #575F66;
+    color: #575f66;
     margin-top: 8px;
     line-height: 175%;
+}
+/* How it works */
+.works {
+    margin-top: 170px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #f6fbff;
+}
+.work__heading {
+    text-align: left;
+}
+.works__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 30px;
+    margin-top: 86px;
+}
+.works-item {
+    border: 16px solid #EAF6FF;
+    padding: 43px;
+    transition: 0.25s;
+}
+.works-item__heading {
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: var(--header-bg);
+    margin-top: 18px;
+}
+.works-item__desc {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-top: 28px;
+    color: #575F66;
+}
+.works-item__link {
+    display: inline-block;
+    color: #575F66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-top: 18px;
+}
+.works-item:hover {
+    border-color: #2E80CE;
+    transform: translateY(-16px);
+}
+.works-item:hover .works-item__link {
+    color: #2E80CE;
 }
