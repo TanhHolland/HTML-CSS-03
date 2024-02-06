@@ -213,6 +213,7 @@ a {
 }
 .service__heading {
     text-align: center;
+    margin: 0 auto;
 }
 .service__desc {
     margin-left: auto;
@@ -354,4 +355,71 @@ a {
 }
 .feature__link {
     margin-top: 38px;
+}
+/* Member */
+.members {
+    margin-top: 170px;
+}
+.members__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.members__link {
+    margin-top: 38px;
+}
+.members__list {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+}
+.members-item__bg {
+    background-color: #EAF6FF;
+    display: flex;
+    align-items: end;
+    border-radius: 6px;
+    padding-top: 28px;
+    overflow: hidden; /*Nội dung bên trong có bị tràn thì cug ẩn đi*/
+}
+.members-item__thumb {
+    max-width: 100%; /* Hình bé hơn thì sẽ ko phóng to 100% width. VD hình thứ 4 đầu sẽ cụt tóc*/
+    height: 290px;
+    object-fit: cover;
+}
+.members-item__name {
+    margin-top: 12px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.75;
+    text-align: center;
+    color: #10375C;
+}
+.members-item__desc {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+    color: #575F66;
+}
+.members__control {
+    display: flex;
+    column-gap: 18px;
+    justify-content: center;
+    margin-top: 38px;
+}
+.members__control-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #575F66;
+    color: #575F66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.members__control-btn:hover {
+    cursor: pointer;
+    background-color: #2E80CE;
+    color: #fff;
 }
